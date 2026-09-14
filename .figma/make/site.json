@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your freelance expertise with a clean, professional portfolio highlighting skills, projects, and services to attract and engage clients.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
