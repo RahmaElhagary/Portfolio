@@ -544,7 +544,7 @@ const PROJECTS = [
     solution:"Transformer-based vision model trained on ASL gesture datasets using PyTorch, with real-time inference pipeline and an accessible web interface.",
     metrics:[{ k:"Accuracy",v:"95%" }, { k:"Framework",v:"PyTorch" }, { k:"Type",v:"Real-time" }, { k:"Domain",v:"ASL" }],
     tech:["PyTorch","Transformers","Computer Vision","OpenCV","Python","HuggingFace"],
-    github:"https://github.com/RahmaElhagary", demo:null,
+    github:"https://github.com/mayarShappan/Soft_project", demo:null,
   },
   {
     id:"02", accent:"vi" as const,
@@ -557,7 +557,7 @@ const PROJECTS = [
     solution:"Built a full ML pipeline with extensive data cleaning on ~39,000 listings, log-transformed price scaling, and XGBoost as the best-performing model for accurate property price prediction.",
     metrics:[{ k:"Records",v:"39K+" }, { k:"Best Model",v:"XGBoost" }, { k:"Price Scaling",v:"Log-Transformed" }, { k:"Stack",v:"Python" }],
     tech:["Python","scikit-learn","XGBoost","Pandas","Data Cleaning"],
-    github:"https://github.com/RahmaElhagary", demo:null,
+    github:"https://github.com/RahmaElhagary/Real_estate_project", demo:null,
   },
 ];
 
