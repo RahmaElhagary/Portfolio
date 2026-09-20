@@ -3,6 +3,7 @@ import emailjs from "@emailjs/browser";
 import rahmaPhoto from "@/imports/photo_white.jfif";
 import edaThumb from "@/imports/image-7.png";
 import signNovaThumb from "@/imports/image-9.png";
+import olistThumb from "@/imports/olist-dashboard.png";
 
 const EMAILJS_SERVICE_ID = "service_revpxkn";
 const EMAILJS_TEMPLATE_ID = "template_eidauss";
@@ -559,6 +560,19 @@ const PROJECTS = [
     tech:["Python","scikit-learn","XGBoost","Pandas","Data Cleaning"],
     github:"https://github.com/RahmaElhagary/Real_estate_project", demo:null,
   },
+  {
+    id:"03", accent:"em" as const,
+    name:"Olist E-Commerce RFM Dashboard",
+    category:"Data Analysis • Business Intelligence • DAX",
+    mockBg:"#0A1017",
+    gradA:"rgba(16,185,129,.22)", gradB:"rgba(6,182,212,.16)",
+    tagline:"An interactive Power BI dashboard analyzing 96K+ e-commerce orders. Engineered advanced DAX measures for RFM customer segmentation and designed a premium, dark-themed UI for actionable geographic and revenue insights.",
+    problem:"E-commerce performance data needed a clear way to reveal customer value, retention opportunities, and geographic revenue patterns across 96K+ orders.",
+    solution:"Built an interactive Power BI dashboard with advanced DAX measures, RFM customer segmentation, cleaned data, and focused visual storytelling for revenue and geographic insights.",
+    metrics:[{ k:"Orders Analyzed",v:"96K+" }, { k:"Customer Segmentation",v:"RFM Model" }, { k:"Data Modeling",v:"Advanced DAX" }, { k:"Dashboard Design",v:"Premium UI" }],
+    tech:["Power BI","DAX","Power Query","Data Visualization","Data Cleaning","RFM Analysis"],
+    github:"https://github.com/RahmaElhagary", demo:null,
+  },
 ];
 
 function Projects() {
@@ -605,6 +619,12 @@ function ProjectCard({ p, open, onToggle }: { p:typeof PROJECTS[0]; open:boolean
             src={signNovaThumb}
             alt="SignNova ASL recognition system"
             style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top center", opacity:.82 }}
+          />
+        ) : p.id === "03" ? (
+          <img
+            src={olistThumb}
+            alt="Olist E-Commerce RFM Power BI dashboard"
+            style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top center", opacity:.88 }}
           />
         ) : (
           /* Faux UI for other projects */
