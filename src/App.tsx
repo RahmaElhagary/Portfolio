@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import rahmaPhoto from "@/imports/photo_white.jfif";
 import edaThumb from "@/imports/image-7.png";
 import signNovaThumb from "@/imports/image-9.png";
-import olistThumb from "@/imports/olist-dashboard.png";
+import olistThumb from "@/imports/image-10.png";
 
 const EMAILJS_SERVICE_ID = "service_revpxkn";
 const EMAILJS_TEMPLATE_ID = "template_eidauss";
