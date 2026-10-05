@@ -4,6 +4,7 @@ import rahmaPhoto from "@/imports/photo_white.jfif";
 import edaThumb from "@/imports/image-7.png";
 import signNovaThumb from "@/imports/image-9.png";
 import olistThumb from "@/imports/image-10.png";
+import arabicSentimentThumb from "@/imports/prject4_poto.jfif";
 
 const EMAILJS_SERVICE_ID = "service_revpxkn";
 const EMAILJS_TEMPLATE_ID = "template_eidauss";
@@ -422,7 +423,8 @@ function About() {
             <p style={{ fontSize:"1rem", color:T.textMuted, lineHeight:1.88, margin:0 }}>
               Beyond engineering, I am an{" "}
               <strong style={{ color:"#FCD34D", fontWeight:600 }}>ECPC Finals Qualifier</strong>{" "}
-              and an active mentor at the{" "}
+              and currently serving as the{" "}
+              <strong style={{ color:T.em, fontWeight:600 }}>Technical Vice Head</strong> and an active mentor at the{" "}
               <strong style={{ color:T.em, fontWeight:600 }}>ACPC Damietta Club</strong>,
               guiding students through advanced Data Structures and Algorithms.
             </p>
@@ -571,7 +573,21 @@ const PROJECTS = [
     solution:"Built an interactive Power BI dashboard with advanced DAX measures, RFM customer segmentation, cleaned data, and focused visual storytelling for revenue and geographic insights.",
     metrics:[{ k:"Orders Analyzed",v:"96K+" }, { k:"Customer Segmentation",v:"RFM Model" }, { k:"Data Modeling",v:"Advanced DAX" }, { k:"Dashboard Design",v:"Premium UI" }],
     tech:["Power BI","DAX","Power Query","Data Visualization","Data Cleaning","RFM Analysis"],
-    github:"https://github.com/RahmaElhagary", demo:null,
+    github:"https://github.com/RahmaElhagary/Olist-E-Commerce-RFM-Dashboard", demo:null,
+  },
+  {
+    id:"04", accent:"vi" as const,
+    name:"Arabic Sentiment Analysis Dashboard",
+    category:"NLP • Deep Learning • Streamlit",
+    mockBg:"#0A0712",
+    gradA:"rgba(139,92,246,.22)", gradB:"rgba(6,182,212,.16)",
+    tagline:"An interactive AI-driven system for real-time sentiment analysis of Arabic customer reviews and feedback, achieving high accuracy using advanced BERT models.",
+    problem:"E-commerce businesses struggle to monitor and analyze Arabic customer feedback efficiently due to language nuances and a lack of real-time sentiment analysis tools.",
+    solution:"An interactive AI-driven dashboard leveraging the advanced CAMeL-Lab BERT model for real-time Arabic sentiment classification, paired with dynamic Plotly visual analytics built using Streamlit.",
+    metrics:[{ k:"CAMeL-Lab Model",v:"BERT-Base" }, { k:"Live Analytics",v:"Real-time" }, { k:"Framework",v:"Streamlit" }, { k:"Domain",v:"Arabic NLP" }],
+    tech:["Python","Streamlit","Transformers","PyTorch","Plotly","NLP"],
+    github:"https://github.com/RahmaElhagary/Arabic-Sentiment-Dashboard",
+    demo:"https://arabic-sentiment-dashboard-jtxejce7waaqoyeudazfpb.streamlit.app/",
   },
 ];
 
@@ -624,6 +640,12 @@ function ProjectCard({ p, open, onToggle }: { p:typeof PROJECTS[0]; open:boolean
           <img
             src={olistThumb}
             alt="Olist E-Commerce RFM Power BI dashboard"
+            style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top center", opacity:.88 }}
+          />
+        ) : p.id === "04" ? (
+          <img
+            src={arabicSentimentThumb}
+            alt="Arabic Sentiment Analysis Dashboard"
             style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", objectPosition:"top center", opacity:.88 }}
           />
         ) : (
@@ -679,61 +701,6 @@ function ProjectCard({ p, open, onToggle }: { p:typeof PROJECTS[0]; open:boolean
           <div style={{ paddingTop:14, marginTop:6, borderTop:`1px solid ${T.bdr}` }}>
             <MiniBlock label="PROBLEM" color="#F59E0B" text={p.problem} />
             <MiniBlock label="SOLUTION" color={ac} text={p.solution} />
-
-            {/* EDA dashboard — only for Real Estate project */}
-            {p.id === "02" && (
-              <div style={{ marginTop:18 }}>
-                {/* Heading */}
-                <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:12 }}>
-                  <div style={{ width:3, height:32, borderRadius:2, background:"linear-gradient(180deg,#F59E0B,#FCD34D)", flexShrink:0 }}/>
-                  <div>
-                    <div style={{ fontFamily:"var(--font-mono)", fontSize:".58rem", color:"#F59E0B", letterSpacing:".1em", fontWeight:600, marginBottom:2 }}>DATA ANALYSIS</div>
-                    <div style={{ fontWeight:700, fontSize:".82rem", color:T.text, letterSpacing:"-.02em", lineHeight:1.2 }}>
-                      Exploratory Data Analysis (EDA) &amp; Data Preprocessing Insights
-                    </div>
-                  </div>
-                </div>
-
-                {/* Chart image card */}
-                <div style={{
-                  borderRadius:12,
-                  border:"1px solid rgba(245,158,11,.2)",
-                  overflow:"hidden",
-                  background:"rgba(8,14,26,.8)",
-                  boxShadow:"0 8px 32px rgba(0,0,0,.45), inset 0 0 40px rgba(245,158,11,.02)",
-                  position:"relative",
-                }}>
-                  {/* Top bar */}
-                  <div style={{
-                    display:"flex", alignItems:"center", gap:6, padding:"8px 12px",
-                    borderBottom:"1px solid rgba(245,158,11,.12)",
-                    background:"rgba(245,158,11,.04)",
-                  }}>
-                    {["#FF5F57","#FFBD2E","#28C840"].map(c => (
-                      <span key={c} style={{ width:8, height:8, borderRadius:"50%", background:c, display:"inline-block" }}/>
-                    ))}
-                    <span style={{ fontFamily:"var(--font-mono)", fontSize:".56rem", color:"rgba(245,158,11,.55)", marginLeft:6, letterSpacing:".06em" }}>
-                      eda_preprocessing_analysis.png
-                    </span>
-                  </div>
-
-                  <div style={{
-                    minHeight:220, display:"flex", alignItems:"center", justifyContent:"center",
-                    padding:24, color:"rgba(245,158,11,.7)", textAlign:"center",
-                    fontFamily:"var(--font-mono)", fontSize:".72rem", letterSpacing:".04em",
-                  }}>
-                    EDA &amp; data preprocessing dashboard
-                  </div>
-
-                  {/* Subtle bottom glow overlay */}
-                  <div style={{
-                    position:"absolute", bottom:0, left:0, right:0, height:28,
-                    background:"linear-gradient(to top, rgba(8,14,26,.6), transparent)",
-                    pointerEvents:"none",
-                  }}/>
-                </div>
-              </div>
-            )}
           </div>
         </div>
 
@@ -744,7 +711,7 @@ function ProjectCard({ p, open, onToggle }: { p:typeof PROJECTS[0]; open:boolean
           </div>
           <div style={{ display:"flex", gap:6 }}>
             <TinyBtn href={p.github}>GitHub</TinyBtn>
-            {p.demo&&<TinyBtn href={p.demo} accent={ac}>Demo ↗</TinyBtn>}
+            {p.demo&&<TinyBtn href={p.demo}>{p.id === "04" ? "Live App" : "Demo ↗"}</TinyBtn>}
           </div>
         </div>
       </div>
@@ -1338,6 +1305,19 @@ function EduCard({ gold, goldL, goldGlow, goldBdr, goldBdrH }: { gold:string; go
 ══════════════════════════════════════════ */
 const EXPERIENCE = [
   {
+    accent: "em" as const,
+    badge: "LEADERSHIP",
+    badgeBg: "rgba(16,185,129,.10)",
+    icon: <IcBriefcase color="#10B981" />,
+    role: "Technical Vice Head",
+    company: "ACPC Damietta Club",
+    location: "Damietta, Egypt",
+    date: "09/2026 – Present",
+    bullets: [
+      "Spearheaded technical operations and strategic planning for club training tracks, enhancing competitive programming readiness.",
+    ],
+  },
+  {
     accent: "vi" as const,
     badge: "INTERNSHIP",
     badgeBg: "rgba(139,92,246,.10)",
@@ -1359,7 +1339,7 @@ const EXPERIENCE = [
     role: "Mentor, ACPC Damietta Club",
     company: "ACPC Damietta Club",
     location: "Damietta, Egypt",
-    date: "2025 – Present",
+    date: "2/2025 – Present",
     bullets: [
       "Led and mentored a group of 20+ students in advanced Data Structures and Algorithms, providing structured guidance on algorithmic logic and competitive programming.",
     ],
